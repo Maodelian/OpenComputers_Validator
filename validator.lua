@@ -7,7 +7,7 @@ local redstone = component.redstone
 
 local dataBase = filesystem.open("/home/database.db", "rb")
 
-function findInDatabase(str)
+local function findInDatabase(str)
 	dataBase:seek("set", 0)
 	while true do
 		local buffer = dataBase:read(32)
